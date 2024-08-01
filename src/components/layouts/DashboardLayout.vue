@@ -59,8 +59,8 @@
 		<div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
 			<!-- Sidebar component, swap this element with another sidebar if you like -->
 			<div
-				class="flex grow flex-col gap-y-5 overflow-y-auto dark:accent-custom-primary-gray border-r dark:border-custom-secondary-gray px-6">
-				<div class="my-4">
+				class="flex  grow flex-col gap-y-5 overflow-y-auto dark:accent-custom-primary-gray border-r dark:border-custom-secondary-gray px-6">
+				<div class="mt-10 mb-4">
 					<img class="h-16" src="/logos/pactto-logo-white.png" alt="Your Company"/>
 				</div>
 				<nav class="flex flex-1 flex-col">
