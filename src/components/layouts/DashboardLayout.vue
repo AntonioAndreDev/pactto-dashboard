@@ -69,9 +69,9 @@
 							<ul role="list" class="-mx-2 space-y-1">
 								<li v-for="item in navigation" :key="item.name">
 									<RouterLink :to="item.href"
-												class="text-indigo-200 hover:bg-custom-secondary-yellow hover:text-white flex p-2 rounded-md gap-x-2">
+												class="text-white font-semibold hover:bg-custom-secondary-yellow hover:text-black flex p-2 rounded-md gap-x-2">
 										<component :is="item.icon"
-												   class="text-black h-6 w-6 shrink-0"
+												   class="h-6 w-6"
 												   aria-hidden="true"/>
 										{{ item.name }}
 									</RouterLink>
@@ -131,8 +131,8 @@ import {
 import {RouterView} from "vue-router/auto";
 
 const navigation = [
-	{name: 'Home', href: '#', icon: HomeIcon, current: true},
-	// {name: 'Pacttos (Chats)', href: '#', icon: UsersIcon, current: false},
+	{name: 'Home', href: '/home', icon: HomeIcon, current: true},
+	{name: 'Pacttos (Chats)', href: '/pacttos-chats', icon: UsersIcon, current: false},
 	// {name: 'Items to review', href: '#', icon: FolderIcon, current: false},
 	// {name: 'Web link you created', href: '#', icon: CalendarIcon, current: false},
 	// {name: 'Personal information', href: '#', icon: DocumentDuplicateIcon, current: false},
