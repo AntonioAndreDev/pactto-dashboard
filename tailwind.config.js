@@ -15,6 +15,18 @@ module.exports = {
 	],
   
   theme: {
+    colors: {
+      "primary-yellow": "#ffba03",
+      "primary-black": "#000000",
+      "primary-gray": "#191d1f",
+      "secondary-yellow": "#ffdd81",
+      "secondary-gray": "#bab8b8",
+      "secondary-white": "#f3f3f2",
+      "accent-ocean": "#1cbaa6",
+      "accent-red": "#d92336",
+      "accent-green": "#7e9c3d",
+
+    },
     container: {
       center: true,
       padding: "2rem",
