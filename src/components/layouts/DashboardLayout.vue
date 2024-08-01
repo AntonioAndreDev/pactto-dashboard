@@ -120,27 +120,30 @@ import {ref} from 'vue'
 import {Dialog, DialogPanel, TransitionChild, TransitionRoot} from '@headlessui/vue'
 import {
 	Bars3Icon,
-	CalendarIcon,
 	ChartPieIcon,
-	DocumentDuplicateIcon,
 	FolderIcon,
 	HomeIcon,
 	UsersIcon,
 	XMarkIcon,
+	LinkIcon,
+	VideoCameraIcon,
+	EyeIcon,
+	UserIcon,
+	GlobeAmericasIcon,
+	ArrowTrendingUpIcon
 } from '@heroicons/vue/24/outline'
-import {RouterView} from "vue-router/auto";
 
 const navigation = [
 	{name: 'Home', href: '/home', icon: HomeIcon, current: true},
 	{name: 'Pacttos (Chats)', href: '/pacttos-chats', icon: UsersIcon, current: false},
-	// {name: 'Items to review', href: '#', icon: FolderIcon, current: false},
-	// {name: 'Web link you created', href: '#', icon: CalendarIcon, current: false},
-	// {name: 'Personal information', href: '#', icon: DocumentDuplicateIcon, current: false},
-	// {name: 'Review packages for sale', href: '#', icon: ChartPieIcon, current: false},q
-	// {name: 'Pactto website', href: '#', icon: ChartPieIcon, current: false},
-	// {name: 'Reference video library', href: '#', icon: ChartPieIcon, current: false},
-	// {name: 'Subscription', href: '#', icon: ChartPieIcon, current: false},
-	// {name: 'Review Settings', href: '#', icon: ChartPieIcon, current: false},
+	{name: 'Items to review', href: '/items-to-review', icon: FolderIcon, current: false},
+	{name: 'Web link you created', href: '/web-links-you-created', icon: LinkIcon, current: false},
+	{name: 'Personal information', href: '/personal-information', icon: UserIcon, current: false},
+	{name: 'Review packages for sale', href: '/review-packages-for-sale', icon: ChartPieIcon, current: false},
+	{name: 'Pactto website', href: '/pactto-website', icon: GlobeAmericasIcon, current: false},
+	{name: 'Reference video library', href: '/reference-video-library', icon: VideoCameraIcon, current: false},
+	{name: 'Subscription', href: '/subscription', icon: ArrowTrendingUpIcon, current: false},
+	{name: 'Review settings', href: '/review-settings', icon: EyeIcon, current: false},
 ]
 
 const sidebarOpen = ref(false)
