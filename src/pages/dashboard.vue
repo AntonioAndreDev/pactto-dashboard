@@ -42,17 +42,6 @@
 												</li>
 											</ul>
 										</li>
-										<li>
-											<div class="text-xs font-semibold leading-6 text-indigo-200">Your teams</div>
-											<ul role="list" class="-mx-2 mt-2 space-y-1">
-												<li v-for="team in teams" :key="team.name">
-													<a :href="team.href" :class="[team.current ? 'bg-indigo-700 text-white' : 'text-indigo-200 hover:bg-indigo-700 hover:text-white', 'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6']">
-														<span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-indigo-400 bg-indigo-500 text-[0.625rem] font-medium text-white">{{ team.initial }}</span>
-														<span class="truncate">{{ team.name }}</span>
-													</a>
-												</li>
-											</ul>
-										</li>
 									</ul>
 								</nav>
 							</div>
@@ -77,17 +66,6 @@
 									<a :href="item.href" :class="[item.current ? 'bg-indigo-700 text-white' : 'text-indigo-200 hover:bg-indigo-700 hover:text-white', 'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6']">
 										<component :is="item.icon" :class="[item.current ? 'text-white' : 'text-indigo-200 group-hover:text-white', 'h-6 w-6 shrink-0']" aria-hidden="true" />
 										{{ item.name }}
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<div class="text-xs font-semibold leading-6 text-indigo-200">Your teams</div>
-							<ul role="list" class="-mx-2 mt-2 space-y-1">
-								<li v-for="team in teams" :key="team.name">
-									<a :href="team.href" :class="[team.current ? 'bg-indigo-700 text-white' : 'text-indigo-200 hover:bg-indigo-700 hover:text-white', 'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6']">
-										<span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-indigo-400 bg-indigo-500 text-[0.625rem] font-medium text-white">{{ team.initial }}</span>
-										<span class="truncate">{{ team.name }}</span>
 									</a>
 								</li>
 							</ul>
@@ -140,17 +118,18 @@ import {
 import { RouterView } from "vue-router/auto";
 
 const navigation = [
-	{ name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-	{ name: 'Team', href: '#', icon: UsersIcon, current: false },
-	{ name: 'Projects', href: '#', icon: FolderIcon, current: false },
-	{ name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-	{ name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-	{ name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
-]
-const teams = [
-	{ id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-	{ id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-	{ id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
+	{ name: 'Home', href: '#', icon: HomeIcon, current: true },
+	{ name: 'Pacttos (Chats)', href: '#', icon: UsersIcon, current: false },
+	{ name: 'Items to review', href: '#', icon: FolderIcon, current: false },
+	{ name: 'Web link you created', href: '#', icon: CalendarIcon, current: false },
+	{ name: 'Personal information', href: '#', icon: DocumentDuplicateIcon, current: false },
+	{ name: 'Review packages for sale', href: '#', icon: ChartPieIcon, current: false },
+	{ name: 'Pactto website', href: '#', icon: ChartPieIcon, current: false },
+	{ name: 'Reference video library', href: '#', icon: ChartPieIcon, current: false },
+	{ name: 'Subscription', href: '#', icon: ChartPieIcon, current: false },
+	{ name: 'Review Settings', href: '#', icon: ChartPieIcon, current: false },
+
+
 ]
 
 const sidebarOpen = ref(false)
