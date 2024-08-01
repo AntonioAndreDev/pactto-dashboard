@@ -61,7 +61,7 @@
 			<div
 				class="flex  grow flex-col gap-y-5 overflow-y-auto dark:accent-custom-primary-gray border-r dark:border-custom-secondary-gray px-6">
 				<div class="mt-10 mb-4">
-					<img class="h-16" src="/logos/pactto-logo-white.png" alt="Your Company"/>
+					<img class="h-14" src="/logos/pactto-logo-white.png" alt="Your Company"/>
 				</div>
 				<nav class="flex flex-1 flex-col">
 					<ul role="list" class="flex flex-1 flex-col gap-y-7">
