@@ -15,18 +15,7 @@ module.exports = {
 	],
   
   theme: {
-    colors: {
-      "primary-yellow": "#ffba03",
-      "primary-black": "#000000",
-      "primary-gray": "#191d1f",
-      "secondary-yellow": "#ffdd81",
-      "secondary-gray": "#bab8b8",
-      "secondary-white": "#f3f3f2",
-      "accent-ocean": "#1cbaa6",
-      "accent-red": "#d92336",
-      "accent-green": "#7e9c3d",
 
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -36,6 +25,15 @@ module.exports = {
     },
     extend: {
       colors: {
+        "custom-primary-yellow": "#ffba03",
+        "custom-primary-black": "#000000",
+        "custom-primary-gray": "#191d1f",
+        "custom-secondary-yellow": "#ffdd81",
+        "custom-secondary-gray": "#bab8b8",
+        "custom-secondary-white": "#f3f3f2",
+        "custom-accent-ocean": "#1cbaa6",
+        "custom-accent-red": "#d92336",
+        "custom-accent-green": "#7e9c3d",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
