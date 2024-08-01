@@ -109,7 +109,7 @@
 
 		<main class="py-10 lg:pl-72">
 			<div class="px-4 sm:px-6 lg:px-8">
-				<RouterView/>
+				<slot></slot>
 			</div>
 		</main>
 	</div>
@@ -136,7 +136,7 @@ const navigation = [
 	// {name: 'Items to review', href: '#', icon: FolderIcon, current: false},
 	// {name: 'Web link you created', href: '#', icon: CalendarIcon, current: false},
 	// {name: 'Personal information', href: '#', icon: DocumentDuplicateIcon, current: false},
-	// {name: 'Review packages for sale', href: '#', icon: ChartPieIcon, current: false},
+	// {name: 'Review packages for sale', href: '#', icon: ChartPieIcon, current: false},q
 	// {name: 'Pactto website', href: '#', icon: ChartPieIcon, current: false},
 	// {name: 'Reference video library', href: '#', icon: ChartPieIcon, current: false},
 	// {name: 'Subscription', href: '#', icon: ChartPieIcon, current: false},

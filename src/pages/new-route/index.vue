@@ -1,7 +1,8 @@
 <template>
 	<DashboardLayout>
 		<div>
-			<h1>Dashboard</h1>
+			<h1>Dashboard Home</h1>
+			<p>Welcome to the dashboard home page</p>
 		</div>
 	</DashboardLayout>
 </template>
@@ -10,3 +11,7 @@
 
 import DashboardLayout from "@/components/layouts/DashboardLayout.vue";
 </script>
+
+<style scoped>
+
+</style>
