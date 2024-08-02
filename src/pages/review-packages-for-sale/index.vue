@@ -1,5 +1,6 @@
 <template>
 	<DashboardLayout>
+		<heading1 class="mb-4">Review packages for sale</heading1>
 		<header class="flex justify-between">
 			<Button @click="showNewPackageToCreate = true" class="uppercase font-semibold flex gap-x-2 text-black">
 				<iconify-icon
@@ -218,6 +219,7 @@ import {
 } from '@/components/ui/number-field'
 import {ref} from "vue";
 import Modal from "@/components/Modal.vue";
+import Heading1 from "@/components/headings/heading1.vue";
 
 const showNewPackageToCreate = ref(false)
 const isOpenModal = ref(false)
