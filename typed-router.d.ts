@@ -24,6 +24,7 @@ declare module 'vue-router/auto-routes' {
     '/pacttos-chats/': RouteRecordInfo<'/pacttos-chats/', '/pacttos-chats', Record<never, never>, Record<never, never>>,
     '/personal-information/': RouteRecordInfo<'/personal-information/', '/personal-information', Record<never, never>, Record<never, never>>,
     '/reference-video-library/': RouteRecordInfo<'/reference-video-library/', '/reference-video-library', Record<never, never>, Record<never, never>>,
+    '/review-packages-for-sale/': RouteRecordInfo<'/review-packages-for-sale/', '/review-packages-for-sale', Record<never, never>, Record<never, never>>,
     '/review-settings/': RouteRecordInfo<'/review-settings/', '/review-settings', Record<never, never>, Record<never, never>>,
     '/web-links-you-created/': RouteRecordInfo<'/web-links-you-created/', '/web-links-you-created', Record<never, never>, Record<never, never>>,
   }
