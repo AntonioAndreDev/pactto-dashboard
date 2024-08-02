@@ -5,7 +5,7 @@
 			<div>
 				<div class="flex justify-between items-center mb-4">
 					<heading2>Select a video</heading2>
-					<Button class="uppercase flex gap-x-2 font-semibold">
+					<Button class="uppercase flex gap-x-2 font-semibold text-black">
 						<iconify-icon
 							class="text-xl"
 							icon="lucide:plus"
