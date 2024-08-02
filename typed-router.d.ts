@@ -27,6 +27,7 @@ declare module 'vue-router/auto-routes' {
     '/reference-video-library/': RouteRecordInfo<'/reference-video-library/', '/reference-video-library', Record<never, never>, Record<never, never>>,
     '/review-packages-for-sale/': RouteRecordInfo<'/review-packages-for-sale/', '/review-packages-for-sale', Record<never, never>, Record<never, never>>,
     '/review-settings/': RouteRecordInfo<'/review-settings/', '/review-settings', Record<never, never>, Record<never, never>>,
+    '/subscription/': RouteRecordInfo<'/subscription/', '/subscription', Record<never, never>, Record<never, never>>,
     '/web-links-you-created/': RouteRecordInfo<'/web-links-you-created/', '/web-links-you-created', Record<never, never>, Record<never, never>>,
   }
 }
