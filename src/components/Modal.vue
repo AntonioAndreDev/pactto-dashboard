@@ -32,14 +32,14 @@
 								</div>
 							</div>
 							<div class="bg-black px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-								<button type="button"
+								<Button type="button"
 										class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
 										@click="action">{{ mainBtnText }}
-								</button>
-								<button type="button"
+								</Button>
+								<Button type="button"
 										class="mt-3 inline-flex w-full justify-center rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-white hover:text-black sm:mt-0 sm:w-auto"
 										@click="closeModal" ref="cancelButtonRef">{{ subBtnText }}
-								</button>
+								</Button>
 							</div>
 						</DialogPanel>
 					</TransitionChild>
@@ -52,6 +52,7 @@
 <script setup lang="ts">
 import {Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot} from '@headlessui/vue'
 import {ExclamationTriangleIcon} from '@heroicons/vue/24/outline'
+import {Button} from "@/components/ui/button";
 
 defineProps({
 	isOpen: Boolean,
