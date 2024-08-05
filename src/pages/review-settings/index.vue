@@ -34,7 +34,7 @@
                 }"
 			class="space-y-6 mx-auto mt-4" :schema="schema">
 			<div class="flex items-center gap-x-4">
-				<p>Brush size for tools ({{ brushSize }}px)</p>
+				<p>Brush size for tools <span v-show="brushSize">({{ brushSize }}px)</span></p>
 				<Input class="w-32" type="range" min="1" max="7" v-model="brushSize"/>
 			</div>
 			<div class="flex gap-4">
