@@ -32,7 +32,7 @@
 						component: 'checkbox',
 					},
                 }"
-			class="space-y-6 mx-auto mt-4" :schema="schema" @submit="submit">
+			class="space-y-6 mx-auto mt-4" :schema="schema">
 			<div class="flex items-center gap-x-4">
 				<p>Brush size for tools ({{ brushSize }}px)</p>
 				<Input class="w-32" type="range" min="1" max="7" v-model="brushSize"/>
@@ -105,11 +105,13 @@
 					</Select>
 				</div>
 			</div>
-			<Button variant="secondary" class="w-full" type="submit">
+			<Button @click="isOpenModal = true" variant="secondary" class="w-full" type="submit">
 				Salvar alterações
 			</Button>
 		</AutoForm>
 	</DashboardLayout>
+	<Modal :is-open="isOpenModal" @update:isOpen="isOpenModal = $event" @action="teste" title="Save changes?"
+		   description="Are you sure you want save the changes?" sub-btn-text="No" main-btn-text="Yes"/>
 </template>
 
 <script setup lang="ts">
@@ -118,7 +120,6 @@ import DashboardLayout from "@/components/layouts/DashboardLayout.vue";
 import Heading1 from "@/components/headings/heading1.vue";
 import {AutoForm} from "@/components/ui/auto-form";
 import {z} from "zod"
-import {countries} from "countries-list";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {ref} from "vue";
@@ -132,8 +133,15 @@ import {
 	SelectValue
 } from "@/components/ui/select";
 import Heading2 from "@/components/headings/heading2.vue";
+import Modal from "@/components/Modal.vue";
 
 const brushSize = ref()
+const isOpenModal = ref(false)
+
+function teste() {
+	console.log("Save changes!")
+	isOpenModal.value = false
+}
 
 
 const schema = z.object({
@@ -165,8 +173,4 @@ const schema = z.object({
 		.boolean()
 		.optional(),
 })
-
-function submit(values: Record<string, string>) {
-	console.log(values);
-}
 </script>
