@@ -26,23 +26,22 @@
                                 </div>
                             </TransitionChild>
                             <!-- Sidebar component, swap this element with another sidebar if you like -->
-                            <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-2">
-                                <div class="flex h-16 shrink-0 items-center">
-                                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white"
-                                         alt="Your Company"/>
+                            <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-black px-6 pb-2">
+                                <div class="mt-10 mb-4">
+                                    <img class="h-8" src="/logos/pactto-logo-white.png" alt="Pactto Logo"/>
                                 </div>
                                 <nav class="flex flex-1 flex-col">
                                     <ul role="list" class="flex flex-1 flex-col gap-y-7">
                                         <li>
-                                            <ul role="list" class="-mx-2 space-y-1">
+                                            <ul role="list" class="-mx-2 space-y-4">
                                                 <li v-for="item in navigation" :key="item.name">
-                                                    <a :href="item.href"
-                                                       :class="[item.current ? 'bg-indigo-700 text-white' : 'text-indigo-200 hover:bg-indigo-700 hover:text-white', 'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6']">
+                                                    <RouterLink :to="item.href"
+                                                                class="text-white text-base font-semibold hover:bg-custom-secondary-yellow hover:text-black flex p-2 rounded-md gap-x-2">
                                                         <component :is="item.icon"
-                                                                   :class="[item.current ? 'text-white' : 'text-indigo-200 group-hover:text-white', 'h-6 w-6 shrink-0']"
+                                                                   class="h-6 w-6"
                                                                    aria-hidden="true"/>
                                                         {{ item.name }}
-                                                    </a>
+                                                    </RouterLink>
                                                 </li>
                                             </ul>
                                         </li>
@@ -61,7 +60,7 @@
             <div
                 class="flex  grow flex-col gap-y-5 overflow-y-auto dark:accent-custom-primary-gray border-r dark:border-custom-secondary-gray px-6">
                 <div class="mt-10 mb-4">
-                    <img class="h-14" src="/logos/pactto-logo-white.png" alt="Your Company"/>
+                    <img class="h-14" src="/logos/pactto-logo-white.png" alt="Pactto Logo"/>
                 </div>
                 <nav class="flex flex-1 flex-col">
                     <ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -120,18 +119,40 @@
             </div>
         </div>
 
-        <div class="sticky top-0 z-40 flex items-center gap-x-6 bg-indigo-600 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-            <button type="button" class="-m-2.5 p-2.5 text-indigo-200 lg:hidden" @click="sidebarOpen = true">
+        <div class="sticky top-0 z-40 flex items-center gap-x-6 bg-black px-4 py-4 shadow-sm sm:px-6 lg:hidden">
+            <button type="button" class="-m-2.5 p-2.5 text-white lg:hidden" @click="sidebarOpen = true">
                 <span class="sr-only">Open sidebar</span>
                 <Bars3Icon class="h-6 w-6" aria-hidden="true"/>
             </button>
-            <div class="flex-1 text-sm font-semibold leading-6 text-white">Dashboard</div>
-            <a href="#">
-                <span class="sr-only">Your profile</span>
-                <img class="h-8 w-8 rounded-full bg-indigo-700"
-                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                     alt=""/>
-            </a>
+            <div class="flex-1 text-sm font-semibold leading-6 text-white">Pactto Dashboard</div>
+            <DropdownMenu>
+                <div>
+                    <DropdownMenuTrigger
+                        class="p-2">
+                        <img class="h-8 w-8 rounded-full bg-indigo-700"
+                             src="https://avatars.githubusercontent.com/u/117135970?v=4"
+                             alt=""/>
+                    </DropdownMenuTrigger>
+                </div>
+                <DropdownMenuContent class="w-56 mr-2">
+                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuSeparator/>
+                    <DropdownMenuGroup>
+                        <DropdownMenuItem>
+                            <span>Option 1</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <span>Option 2</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <span>Option 3</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <span>Option 4</span>
+                        </DropdownMenuItem>
+                    </DropdownMenuGroup>
+                </DropdownMenuContent>
+            </DropdownMenu>
         </div>
 
         <main class="py-10 lg:pl-72">
