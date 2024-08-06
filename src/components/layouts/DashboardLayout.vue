@@ -125,12 +125,34 @@
                 <Bars3Icon class="h-6 w-6" aria-hidden="true"/>
             </button>
             <div class="flex-1 text-sm font-semibold leading-6 text-white">Pactto Dashboard</div>
-            <a href="#">
-                <span class="sr-only">Your profile</span>
-                <img class="h-8 w-8 rounded-full bg-indigo-700"
-                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                     alt=""/>
-            </a>
+            <DropdownMenu>
+                <div>
+                    <DropdownMenuTrigger
+                        class="p-2">
+                        <img class="h-8 w-8 rounded-full bg-indigo-700"
+                             src="https://avatars.githubusercontent.com/u/117135970?v=4"
+                             alt=""/>
+                    </DropdownMenuTrigger>
+                </div>
+                <DropdownMenuContent class="w-56 mr-2">
+                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuSeparator/>
+                    <DropdownMenuGroup>
+                        <DropdownMenuItem>
+                            <span>Option 1</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <span>Option 2</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <span>Option 3</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                            <span>Option 4</span>
+                        </DropdownMenuItem>
+                    </DropdownMenuGroup>
+                </DropdownMenuContent>
+            </DropdownMenu>
         </div>
 
         <main class="py-10 lg:pl-72">
