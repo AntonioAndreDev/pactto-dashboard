@@ -9,7 +9,7 @@
                     </div>
                     <Select>
                         <SelectTrigger class="md:w-[180px] font-semibold">
-                            <SelectValue placeholder="Fazer download"/>
+                            <SelectValue placeholder="Download Now"/>
                         </SelectTrigger>
                         <SelectContent>
                             <SelectGroup>

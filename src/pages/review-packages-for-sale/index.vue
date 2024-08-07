@@ -227,6 +227,7 @@ const isOpenModal = ref(false)
 function teste() {
     isOpenModal.value = false
     showNewPackageToCreate.value = false
+    console.log("Package!")
 }
 </script>
 
